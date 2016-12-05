@@ -1,0 +1,76 @@
+1.	a) #eax = A + C	b) #ebx = 42 * B	c) #ecx= (C )* 4	d) #eax = (A + C) Ð (C * 4)2.	a) the code fragment is equivalent to,    if (A < B)
+    {
+        A = (A * 12);
+    }
+    else
+    {
+        B = B * 8;
+    }
+
+
+	b) the code fragment is equivalent to,
+    if ((X - Y) > 0)
+    {
+        Y = Z + Y;
+        Z = Z - Y;
+    }
+    else
+    {
+        Y = Z + X;
+	Z = Z - X;
+    }
+
+
+	c) the code fragment is equivalent to,
+    do {
+        S = ((2 * S) + 1);
+    } while (S < T)
+
+	T = S - T;
+
+3.
+	a) The code fragment is equivalent to,
+
+	int f(int P0) {
+		
+		int V0 = 1;
+		int V1 = 0;
+
+		if (P0 == V0)
+		{
+			while (V0 > 0)
+			{
+				V0 = 2 * V0
+			}
+		}
+		else {
+			V1 = 1;
+		}
+		
+		return V1;
+
+	b) The code that was reversed engineered compares the parameter that is passed into the function to the variable V0. It compares the values to see if both V0 AND P0 are on the same value and then returns V1, which has a value of either 0 or 1. 
+What this shows is that this will return a value of 0 or 1 depending if the function ends up being true or not. 
+
+
+4.
+	a) The code fragment is equivalent to,
+
+	int g (int P0) {
+		
+		V1 = 0x80000000;
+		V0 = 31;
+
+		if (V0 != 0) {
+			if (V1 == P0) {
+				V0 = V0 - 1;
+				V0 = ((unsigned int) x) >> 0;
+			}
+		}
+
+		return V1;
+
+	b) This function is used to compute whether or not the value of V0 is both not greater equal to 0 and equal to the parameter. This will return a value of 1 or 2 from the variable v1.
+		
+
+        
